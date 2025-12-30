@@ -1,11 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-#Project Name
-MyPortfolio
-
-#Project Description
-My website where I introduce myself.
-
 ## Getting Started
 
 First, run the development server:
