@@ -4,7 +4,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbInkdrop from '../public/images/SnakeGame.png'
-import thumbWalknote from '../public/images/WPm test.png'
+import thumbWalknote from '../public/images/WPM test.png'
 
 const Works = () => (
   <Layout title="Works">
