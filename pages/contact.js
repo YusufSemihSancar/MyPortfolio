@@ -1,4 +1,4 @@
-import { Container, Heading, Text, Button, VStack, HStack, Input, Textarea, FormControl, FormLabel, useToast } from '@chakra-ui/react'
+import { Container, Heading, Text, Button, VStack, Input, Textarea, FormControl, FormLabel, useToast } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { FaLinkedin, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa'
@@ -54,21 +54,21 @@ const Contact = () => {
   return (
     <Layout title="Contact">
       <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading as="h3" fontSize={{ base: 18, md: 20 }} mb={4}>
           Contact Me
         </Heading>
 
         <Section delay={0.1}>
-          <VStack spacing={6} align="start" maxW="600px">
-            <Text fontSize="lg" mb={4}>
+          <VStack spacing={6} align="start" width={{ base: "100%", md: "600px" }} mx="auto">
+            <Text fontSize={{ base: "md", md: "lg" }} mb={4} textAlign={{ base: "center", md: "left" }}>
               I&apos;d love to hear from you! Whether you have a question, a project idea, 
               or just want to connect, feel free to reach out using the form below.
             </Text>
 
             <form onSubmit={handleSubmit} style={{ width: '100%' }}>
-              <VStack spacing={4} align="start">
+              <VStack spacing={4} align="stretch" width="100%">
                 <FormControl isRequired>
-                  <FormLabel htmlFor="name">Name</FormLabel>
+                  <FormLabel htmlFor="name" fontSize={{ base: "sm", md: "md" }}>Name</FormLabel>
                   <Input
                     id="name"
                     name="name"
@@ -77,11 +77,12 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Your Name"
                     variant="filled"
+                    size={{ base: "md", md: "lg" }}
                   />
                 </FormControl>
 
                 <FormControl isRequired>
-                  <FormLabel htmlFor="email">Email</FormLabel>
+                  <FormLabel htmlFor="email" fontSize={{ base: "sm", md: "md" }}>Email</FormLabel>
                   <Input
                     id="email"
                     name="email"
@@ -90,20 +91,22 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     variant="filled"
+                    size={{ base: "md", md: "lg" }}
                   />
                 </FormControl>
 
                 <FormControl isRequired>
-                  <FormLabel htmlFor="message">Message</FormLabel>
+                  <FormLabel htmlFor="message" fontSize={{ base: "sm", md: "md" }}>Message</FormLabel>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your message here..."
-                    rows={6}
+                    rows={{ base: 4, md: 6 }}
                     variant="filled"
                     resize="vertical"
+                    size={{ base: "md", md: "lg" }}
                   />
                 </FormControl>
 
@@ -114,17 +117,18 @@ const Contact = () => {
                   loadingText="Opening Email Client..."
                   width="full"
                   mt={4}
+                  size={{ base: "md", md: "lg" }}
                 >
                   Send Message
                 </Button>
               </VStack>
             </form>
 
-            <Text fontSize="md" mt={6} mb={4}>
+            <Text fontSize={{ base: "sm", md: "md" }} mt={6} mb={4} textAlign={{ base: "center", md: "left" }}>
               Or find me on social media:
             </Text>
 
-            <HStack spacing={4}>
+            <VStack spacing={3} align={{ base: "center", md: "flex-start" }}>
               <Button
                 as="a"
                 href="https://github.com/YusufSemihSancar"
@@ -132,6 +136,8 @@ const Contact = () => {
                 leftIcon={<FaGithub />}
                 colorScheme="teal"
                 variant="outline"
+                size={{ base: "sm", md: "md" }}
+                width={{ base: "full", md: "auto" }}
               >
                 GitHub
               </Button>
@@ -142,6 +148,8 @@ const Contact = () => {
                 leftIcon={<FaLinkedin />}
                 colorScheme="teal"
                 variant="outline"
+                size={{ base: "sm", md: "md" }}
+                width={{ base: "full", md: "auto" }}
               >
                 LinkedIn
               </Button>
@@ -152,6 +160,8 @@ const Contact = () => {
                 leftIcon={<FaYoutube />}
                 colorScheme="teal"
                 variant="outline"
+                size={{ base: "sm", md: "md" }}
+                width={{ base: "full", md: "auto" }}
               >
                 YouTube
               </Button>
@@ -162,10 +172,12 @@ const Contact = () => {
                 leftIcon={<FaInstagram />}
                 colorScheme="teal"
                 variant="outline"
+                size={{ base: "sm", md: "md" }}
+                width={{ base: "full", md: "auto" }}
               >
                 Instagram
               </Button>
-            </HStack>
+            </VStack>
           </VStack>
         </Section>
       </Container>
