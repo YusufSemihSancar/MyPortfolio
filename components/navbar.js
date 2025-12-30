@@ -91,7 +91,7 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/YusufSemihSancar"
+            href="https://github.com/YusufSemihSancar/MyPortfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -132,7 +132,7 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/YusufSemihSancar"
+                  href="https://github.com/YusufSemihSancar/MyPortfolio"
                 >
                   View Source
                 </MenuItem>
